@@ -59,29 +59,379 @@ export const sampleVocabulary = [
     cefrLevel: "B1",
     createdAt: new Date(Date.now() - 6 * 24 * 60 * 60 * 1000),
   },
+  {
+    id: "7",
+    word: "Serendipity",
+    ipa: "/ˌser.ənˈdɪp.ə.ti/",
+    meaning: "Sự tình cờ, may mắn tìm thấy những điều thú vị",
+    partOfSpeech: "noun",
+    example: "Meeting her was pure serendipity.",
+    cefrLevel: "C2",
+    createdAt: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000),
+  },
+  {
+    id: "8",
+    word: "Resilient",
+    ipa: "/rɪˈzɪl.jənt/",
+    meaning: "Kiên cường, có khả năng phục hồi nhanh",
+    partOfSpeech: "adjective",
+    example: "Children are often more resilient than adults.",
+    cefrLevel: "C1",
+    createdAt: new Date(Date.now() - 8 * 24 * 60 * 60 * 1000),
+  },
+  {
+    id: "9",
+    word: "Ponder",
+    ipa: "/ˈpɒn.dəʳ/",
+    meaning: "Suy ngẫm, cân nhắc kỹ lưỡng",
+    partOfSpeech: "verb",
+    example: "She sat by the lake to ponder her future.",
+    cefrLevel: "C1",
+    createdAt: new Date(Date.now() - 9 * 24 * 60 * 60 * 1000),
+  },
+  {
+    id: "10",
+    word: "Meticulous",
+    ipa: "/məˈtɪk.jə.ləs/",
+    meaning: "Tỉ mỉ, kỹ càng, trau chuốt",
+    partOfSpeech: "adjective",
+    example: "He is meticulous about his appearance.",
+    cefrLevel: "C2",
+    createdAt: new Date(Date.now() - 10 * 24 * 60 * 60 * 1000),
+  },
+  {
+    id: "11",
+    word: "Ebullient",
+    ipa: "/ɪˈbʌl.jənt/",
+    meaning: "Sôi nổi, bồng bột, tràn đầy năng lượng",
+    partOfSpeech: "adjective",
+    example: "She sounded ebullient and happy.",
+    cefrLevel: "C2",
+    createdAt: new Date(Date.now() - 11 * 24 * 60 * 60 * 1000),
+  },
+  {
+    id: "12",
+    word: "Magnanimous",
+    ipa: "/mæɡˈnæn.ɪ.məs/",
+    meaning: "Hào hiệp, cao thượng",
+    partOfSpeech: "adjective",
+    example: "The team's manager was magnanimous in victory.",
+    cefrLevel: "C2",
+    createdAt: new Date(Date.now() - 12 * 24 * 60 * 60 * 1000),
+  },
+  {
+    id: "13",
+    word: "Ubiquitous",
+    ipa: "/juːˈbɪk.wɪ.təs/",
+    meaning: "Có mặt ở khắp nơi, phổ biến",
+    partOfSpeech: "adjective",
+    example: "Mobile phones are now ubiquitous.",
+    cefrLevel: "C1",
+    createdAt: new Date(Date.now() - 13 * 24 * 60 * 60 * 1000),
+  },
+  {
+    id: "14",
+    word: "Nefarious",
+    ipa: "/nəˈfeə.ri.əs/",
+    meaning: "Hung ác, bất chính, xấu xa",
+    partOfSpeech: "adjective",
+    example: "The company's CEO seems to have been involved in some nefarious practices.",
+    cefrLevel: "C2",
+    createdAt: new Date(Date.now() - 14 * 24 * 60 * 60 * 1000),
+  },
+  {
+    id: "15",
+    word: "Cacophony",
+    ipa: "/kəˈkɒf.ə.ni/",
+    meaning: "Tạp âm, trối tai",
+    partOfSpeech: "noun",
+    example: "As we entered the farmyard we were met with a cacophony of animal sounds.",
+    cefrLevel: "C2",
+    createdAt: new Date(Date.now() - 15 * 24 * 60 * 60 * 1000),
+  },
+  {
+    id: "16",
+    word: "Ephemeral",
+    ipa: "/ɪˈfem.ər.əl/",
+    meaning: "Phù du, chóng tàn, ngắn ngủi",
+    partOfSpeech: "adjective",
+    example: "Fashions are ephemeral, changing with every season.",
+    cefrLevel: "C2",
+    createdAt: new Date(Date.now() - 16 * 24 * 60 * 60 * 1000),
+  },
+  {
+    id: "17",
+    word: "Luminous",
+    ipa: "/ˈluː.mɪ.nəs/",
+    meaning: "Sáng chói, tỏa sáng, dạ quang",
+    partOfSpeech: "adjective",
+    example: "The library was lit by the luminous glow of laptops.",
+    cefrLevel: "C1",
+    createdAt: new Date(Date.now() - 17 * 24 * 60 * 60 * 1000),
+  },
+  {
+    id: "18",
+    word: "Obfuscate",
+    ipa: "/ˈɒb.fʌs.keɪt/",
+    meaning: "Làm khó hiểu, làm hoang mang",
+    partOfSpeech: "verb",
+    example: "She was criticized for using arguments that obfuscated the main issue.",
+    cefrLevel: "C2",
+    createdAt: new Date(Date.now() - 18 * 24 * 60 * 60 * 1000),
+  },
+  {
+    id: "19",
+    word: "Quixotic",
+    ipa: "/kwɪkˈsɒt.ɪk/",
+    meaning: "Hào hiệp viển vông, lãng mạn kiểu Don Quixote",
+    partOfSpeech: "adjective",
+    example: "This is a vast, exciting and some say quixotic project.",
+    cefrLevel: "C2",
+    createdAt: new Date(Date.now() - 19 * 24 * 60 * 60 * 1000),
+  },
+  {
+    id: "20",
+    word: "Resonance",
+    ipa: "/ˈrez.ən.əns/",
+    meaning: "Sự cộng hưởng, âm vang",
+    partOfSpeech: "noun",
+    example: "This poem has a deep resonance for me.",
+    cefrLevel: "C2",
+    createdAt: new Date(Date.now() - 20 * 24 * 60 * 60 * 1000),
+  },
+  {
+    id: "21",
+    word: "Surreptitious",
+    ipa: "/ˌsʌr.əpˈtɪʃ.əs/",
+    meaning: "Lén lút, gian lận, bí mật",
+    partOfSpeech: "adjective",
+    example: "She seemed to be listening to what I was saying, but I couldn't help noticing her surreptitious glances at the clock.",
+    cefrLevel: "C2",
+    createdAt: new Date(Date.now() - 21 * 24 * 60 * 60 * 1000),
+  },
+  {
+    id: "22",
+    word: "Trepidation",
+    ipa: "/ˌtrep.ɪˈdeɪ.ʃən/",
+    meaning: "Sự rung chuyển, sự bối rối, sự lo lắng",
+    partOfSpeech: "noun",
+    example: "We view future developments with some trepidation.",
+    cefrLevel: "C2",
+    createdAt: new Date(Date.now() - 22 * 24 * 60 * 60 * 1000),
+  },
+  {
+    id: "23",
+    word: "Umbrage",
+    ipa: "/ˈʌm.brɪdʒ/",
+    meaning: "Sự phật ý, sự mất lòng (to take umbrage)",
+    partOfSpeech: "noun",
+    example: "Will she take umbrage if she isn't invited to the wedding?",
+    cefrLevel: "C2",
+    createdAt: new Date(Date.now() - 23 * 24 * 60 * 60 * 1000),
+  },
+  {
+    id: "24",
+    word: "Vicarious",
+    ipa: "/vɪˈkeə.ri.əs/",
+    meaning: "Thay cho người khác, gián tiếp",
+    partOfSpeech: "adjective",
+    example: "She took a vicarious pleasure in her friend's achievements.",
+    cefrLevel: "C2",
+    createdAt: new Date(Date.now() - 24 * 24 * 60 * 60 * 1000),
+  },
+  {
+    id: "25",
+    word: "Wistful",
+    ipa: "/ˈwɪst.fəl/",
+    meaning: "Bâng khuâng, nuối tiếc, đăm chiêu",
+    partOfSpeech: "adjective",
+    example: "I thought about those days in Spain and grew wistful.",
+    cefrLevel: "C2",
+    createdAt: new Date(Date.now() - 25 * 24 * 60 * 60 * 1000),
+  },
+  {
+    id: "26",
+    word: "Xenophobia",
+    ipa: "/ˌzen.əˈfəʊ.bi.ə/",
+    meaning: "Bài ngoại, sợ người lạ",
+    partOfSpeech: "noun",
+    example: "We must fight against racism and xenophobia.",
+    cefrLevel: "C2",
+    createdAt: new Date(Date.now() - 26 * 24 * 60 * 60 * 1000),
+  },
+  {
+    id: "27",
+    word: "Yield",
+    ipa: "/jiːld/",
+    meaning: "Sinh lợi, mang lại (hoặc đầu hàng)",
+    partOfSpeech: "verb",
+    example: "The investigation yielded some unexpected results.",
+    cefrLevel: "B2",
+    createdAt: new Date(Date.now() - 27 * 24 * 60 * 60 * 1000),
+  },
+  {
+    id: "28",
+    word: "Zeal",
+    ipa: "/ziːl/",
+    meaning: "Lòng hăng hái, nhiệt huyết, sự sốt sắng",
+    partOfSpeech: "noun",
+    example: "reforming zeal",
+    cefrLevel: "C1",
+    createdAt: new Date(Date.now() - 28 * 24 * 60 * 60 * 1000),
+  },
+  {
+    id: "29",
+    word: "Alacrity",
+    ipa: "/əˈlæk.rə.ti/",
+    meaning: "Sự sốt sắng, hoạt bát, nhanh nhẩu",
+    partOfSpeech: "noun",
+    example: "She accepted the money with alacrity.",
+    cefrLevel: "C2",
+    createdAt: new Date(Date.now() - 29 * 24 * 60 * 60 * 1000),
+  },
+  {
+    id: "30",
+    word: "Bombastic",
+    ipa: "/bɒmˈbæs.tɪk/",
+    meaning: "Khoa trương, kêu nhưng rỗng tuếch (văn phong)",
+    partOfSpeech: "adjective",
+    example: "a bombastic statement",
+    cefrLevel: "C2",
+    createdAt: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000),
+  },
+  {
+    id: "31",
+    word: "Capricious",
+    ipa: "/kəˈprɪʃ.əs/",
+    meaning: "Thất thường, đồng bóng",
+    partOfSpeech: "adjective",
+    example: "a capricious child",
+    cefrLevel: "C2",
+    createdAt: new Date(Date.now() - 31 * 24 * 60 * 60 * 1000),
+  },
+  {
+    id: "32",
+    word: "Diatribe",
+    ipa: "/ˈdaɪ.ə.traɪb/",
+    meaning: "Bài chỉ trích kịch liệt, lời văn đả kích",
+    partOfSpeech: "noun",
+    example: "He launched into a long diatribe against the government.",
+    cefrLevel: "C2",
+    createdAt: new Date(Date.now() - 32 * 24 * 60 * 60 * 1000),
+  },
+  {
+    id: "33",
+    word: "Enervate",
+    ipa: "/ˈen.ə.veɪt/",
+    meaning: "Làm kiệt sức, làm mòn mỏi",
+    partOfSpeech: "verb",
+    example: "I find this heat very enervating.",
+    cefrLevel: "C2",
+    createdAt: new Date(Date.now() - 33 * 24 * 60 * 60 * 1000),
+  },
+  {
+    id: "34",
+    word: "Furtive",
+    ipa: "/ˈfɜː.tɪv/",
+    meaning: "Lén lút, ngầm (nhìn, cười)",
+    partOfSpeech: "adjective",
+    example: "I saw him cast a furtive glance at the woman at the table to his right.",
+    cefrLevel: "C2",
+    createdAt: new Date(Date.now() - 34 * 24 * 60 * 60 * 1000),
+  },
+  {
+    id: "35",
+    word: "Garrulous",
+    ipa: "/ˈɡær.əl.əs/",
+    meaning: "Nói nhiều, ba hoa",
+    partOfSpeech: "adjective",
+    example: "He was not only without political views but was garrulous and boring.",
+    cefrLevel: "C2",
+    createdAt: new Date(Date.now() - 35 * 24 * 60 * 60 * 1000),
+  },
+  {
+    id: "36",
+    word: "Harangue",
+    ipa: "/həˈræŋ/",
+    meaning: "Bài diễn văn sùng sục, nói tràng giang đại hải để thuyết phục/chỉ trích",
+    partOfSpeech: "verb",
+    example: "A drunk in the station was haranguing passers-by.",
+    cefrLevel: "C2",
+    createdAt: new Date(Date.now() - 36 * 24 * 60 * 60 * 1000),
+  },
+  {
+    id: "37",
+    word: "Iconoclast",
+    ipa: "/aɪˈkɒn.ə.klæst/",
+    meaning: "Người đập tan thần tượng, người chống lại những tín ngưỡng lâu đời",
+    partOfSpeech: "noun",
+    example: "Rogers, an iconoclast in architecture, is sometimes described as creative and controversial.",
+    cefrLevel: "C2",
+    createdAt: new Date(Date.now() - 37 * 24 * 60 * 60 * 1000),
+  },
+  {
+    id: "38",
+    word: "Juxtapose",
+    ipa: "/ˌdʒʌk.stəˈpəʊz/",
+    meaning: "Đặt cạnh nhau (để đối chiếu)",
+    partOfSpeech: "verb",
+    example: "The exhibition juxtaposes Picasso's early drawings with his later paintings.",
+    cefrLevel: "C2",
+    createdAt: new Date(Date.now() - 38 * 24 * 60 * 60 * 1000),
+  },
+  {
+    id: "39",
+    word: "Kinetic",
+    ipa: "/kɪˈnet.ɪk/",
+    meaning: "Thuộc động lực, do động lực",
+    partOfSpeech: "adjective",
+    example: "kinetic energy",
+    cefrLevel: "C2",
+    createdAt: new Date(Date.now() - 39 * 24 * 60 * 60 * 1000),
+  },
+  {
+    id: "40",
+    word: "Laconic",
+    ipa: "/ləˈkɒn.ɪk/",
+    meaning: "Vắn tắt, gọn gàng, súc tích (cách trả lời)",
+    partOfSpeech: "adjective",
+    example: "She had a laconic wit.",
+    cefrLevel: "C2",
+    createdAt: new Date(Date.now() - 40 * 24 * 60 * 60 * 1000),
+  }
 ];
 
 export function initializeSampleData() {
   const hasData = localStorage.getItem("magicEnglishVocab");
-  const hasInitialized = localStorage.getItem("magicEnglishSampleDataLoaded");
 
-  // Only load sample data if user has no data and hasn't explicitly dismissed it
-  if (!hasData && !hasInitialized) {
-    // Ask user if they want sample data
-    return true;
+  // Check if data exists and contains the full sample set
+  if (hasData) {
+    try {
+      const parsed = JSON.parse(hasData);
+      // If we have data, but less than the current sample set (e.g. old 10 vs new 40),
+      // allow re-initialization to get the new words.
+      if (Array.isArray(parsed) && parsed.length >= sampleVocabulary.length) return false;
+    } catch {
+      // invalid data, treat as empty
+    }
   }
-  return false;
+
+  // Always offer if empty, ignoring dismiss flag for now
+  return true;
 }
 
 export function loadSampleData() {
   localStorage.setItem("magicEnglishVocab", JSON.stringify(sampleVocabulary));
   localStorage.setItem("magicEnglishSampleDataLoaded", "true");
-  
-  // Set a streak of 5 days for demo purposes
-  localStorage.setItem("currentStreak", "5");
+
+  // Set a streak of 12 days for demo purposes (to show badges)
+  localStorage.setItem("currentStreak", "12");
   localStorage.setItem("lastStudyDate", new Date().toDateString());
+
+  // Mock badges logic is handled dynamically in StatsStreaks.vue based on streak/vocab count
 }
 
 export function skipSampleData() {
   localStorage.setItem("magicEnglishSampleDataLoaded", "true");
 }
+

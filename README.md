@@ -1,6 +1,6 @@
 # Magic English - Ứng dụng Học tiếng Anh "All-in-One"
 
-Một ứng dụng web hiện đại được xây dựng với React và Tailwind CSS, hỗ trợ người tự học tiếng Anh với ba chức năng chính được hỗ trợ bởi AI.
+Một ứng dụng web hiện đại được chuyển đổi sang **Vue.js 3** và Tailwind CSS, hỗ trợ người tự học tiếng Anh với ba chức năng chính được hỗ trợ bởi AI.
 
 ## 🌟 Tính năng chính
 
@@ -18,7 +18,7 @@ Một ứng dụng web hiện đại được xây dựng với React và Tailwi
 
 ### 3. **Stats & Streaks** - Theo dõi Tiến độ
 - 🔥 Chuỗi ngày học liên tục (Streak tracking)
-- 📊 Biểu đồ phân tích từ vựng
+- 📊 Biểu đồ phân tích từ vựng (Powered by Chart.js)
 - 🏆 Hệ thống huy hiệu thành tích
 - 📈 Thống kê tiến bộ theo cấp độ CEFR
 
@@ -51,6 +51,10 @@ Trong phiên bản production, có thể tích hợp với:
 - Hoặc các LLM khác
 
 ## 🚀 Bắt đầu
+
+1. **Cài đặt dependencies**: `npm install`
+2. **Chạy ứng dụng**: `npm run dev`
+3. **Build production**: `npm run build`
 
 Ứng dụng sẽ tự động:
 1. Hiển thị màn hình chào mừng cho người dùng mới
@@ -95,6 +99,6 @@ Giúp người tự học tiếng Anh:
 
 ---
 
-**Phát triển bởi**: Figma Make AI  
-**Công nghệ**: React, TypeScript, Tailwind CSS, Recharts, Radix UI  
-**Phiên bản**: 1.0.0
+**Phát triển bởi**: Figma Make AI (Migrated to Vue by Antigravity)  
+**Công nghệ**: Vue.js 3, TypeScript, Tailwind CSS, Vue ChartJS, Radix Vue  
+**Phiên bản**: 1.1.0 (Vue Migration)

@@ -6,20 +6,10 @@ import WelcomeScreen from "./components/WelcomeScreen.vue";
 import MagicVocab from "./components/MagicVocab.vue";
 import GrammarChecker from "./components/GrammarChecker.vue";
 import StatsStreaks from "./components/StatsStreaks.vue";
-import { initializeSampleData, loadSampleData, skipSampleData } from "./utils/sampleData";
-
-// Dialog components
-import Dialog from "./components/ui/Dialog.vue";
-import DialogContent from "./components/ui/DialogContent.vue";
-import DialogHeader from "./components/ui/DialogHeader.vue";
-import DialogTitle from "./components/ui/DialogTitle.vue";
-import DialogDescription from "./components/ui/DialogDescription.vue";
-import DialogFooter from "./components/ui/DialogFooter.vue";
-import Button from "./components/ui/Button.vue";
+import { initializeSampleData, loadSampleData } from "./utils/sampleData";
 
 const activeTab = ref("vocab")
 const showWelcome = ref(false)
-const showSampleDataDialog = ref(false)
 
 onMounted(() => {
   const hasVisited = localStorage.getItem("magicEnglishVisited")
@@ -27,30 +17,22 @@ onMounted(() => {
     showWelcome.value = true
   }
 
-  // Check if we should offering sample data
+  // Auto load sample data if missing
   if (initializeSampleData()) {
-    showSampleDataDialog.value = true;
+    loadSampleData();
+    
+    // If user is already past the welcome screen (meaning MagicVocab is likely mounted with empty data),
+    // force a reload to ensure the new data is displayed.
+    // If they are on the Welcome screen, MagicVocab hasn't mounted yet, so it will read the data when it does.
+    if (hasVisited) {
+      window.location.reload();
+    }
   }
 })
 
 const handleGetStarted = () => {
   localStorage.setItem("magicEnglishVisited", "true")
   showWelcome.value = false
-}
-
-const handleLoadSampleData = () => {
-  loadSampleData();
-  toast.success("Đã tải dữ liệu mẫu thành công!");
-  showSampleDataDialog.value = false;
-  // Trigger a reload or event to update MagicVocab if needed. 
-  // Since MagicVocab reads on mount, it might need a re-mount or watcher.
-  // We can force re-render by key or just reload page.
-  window.location.reload();
-}
-
-const handleSkipSampleData = () => {
-  skipSampleData();
-  showSampleDataDialog.value = false;
 }
 </script>
 
@@ -78,22 +60,6 @@ const handleSkipSampleData = () => {
       </div>
     </template>
     
-    <!-- Sample Data Dialog -->
-    <Dialog v-model:open="showSampleDataDialog">
-      <DialogContent>
-        <DialogHeader>
-          <DialogTitle>Tải dữ liệu mẫu?</DialogTitle>
-          <DialogDescription>
-            Bạn có muốn tải một số từ vựng mẫu để trải nghiệm ứng dụng ngay lập tức không?
-          </DialogDescription>
-        </DialogHeader>
-        <DialogFooter>
-          <Button variant="ghost" @click="handleSkipSampleData">Không, cảm ơn</Button>
-          <Button @click="handleLoadSampleData" class="bg-emerald-500 hover:bg-emerald-600">Tải Dữ Liệu Mẫu</Button>
-        </DialogFooter>
-      </DialogContent>
-    </Dialog>
-
     <Toaster position="top-right" />
   </div>
 </template>

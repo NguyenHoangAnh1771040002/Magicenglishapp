@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { ref, computed, watch, onMounted } from 'vue';
-import { Plus, Search, Filter, Volume2, Edit, Trash2 } from 'lucide-vue-next';
+import { Plus, Search, Filter, Volume2, Edit, Trash2, Download } from 'lucide-vue-next';
 import { toast } from 'vue-sonner';
+import { loadSampleData } from '../utils/sampleData';
 
 import Button from './ui/Button.vue';
 import Input from './ui/Input.vue';
@@ -203,6 +204,15 @@ const getCefrColor = (level: string) => {
 const setIsLoading = (loading: boolean) => {
   isLoading.value = loading;
 };
+
+const handleLoadSample = () => {
+  loadSampleData();
+  const saved = localStorage.getItem("magicEnglishVocab");
+  if (saved) {
+    words.value = JSON.parse(saved);
+    toast.success("Đã tải dữ liệu mẫu thành công!");
+  }
+};
 </script>
 
 <template>
@@ -237,6 +247,14 @@ const setIsLoading = (loading: boolean) => {
         <p class="text-gray-500 mb-6">
           Nhấn nút + để thêm từ đầu tiên
         </p>
+        <Button
+          variant="outline"
+          class="mt-4 border-dashed"
+          @click="handleLoadSample"
+        >
+          <Download class="w-4 h-4 mr-2" />
+          Tải dữ liệu mẫu
+        </Button>
       </div>
 
       <!-- Word Cards Grid -->
