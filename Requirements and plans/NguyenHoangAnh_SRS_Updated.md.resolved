@@ -1,0 +1,95 @@
+# TÀI LIỆU ĐẶC TẢ YÊU CẦU PHẦN MỀM (SRS)
+**Dự án:** Magic English – Ứng dụng Học tiếng Anh "Tất-cả-trong-một"
+**Phiên bản:** 2.0 (Cập nhật & Mở rộng)
+
+---
+
+## 1. GIỚI THIỆU
+
+### 1.1 Mục đích
+Tài liệu này mô tả chi tiết các yêu cầu chức năng và phi chức năng cho ứng dụng Magic English. Phiên bản này được cập nhật dựa trên đề bài gốc và bổ sung các tính năng nâng cao nhằm hoàn thiện trải nghiệm người dùng, hướng tới mục tiêu trở thành công cụ hỗ trợ học tập toàn diện.
+
+### 1.2 Phạm vi sản phẩm
+Magic English là ứng dụng đa nền tảng (Web/Mobile) hỗ trợ người tự học tiếng Anh. Bên cạnh 3 trụ cột chính (Từ vựng, Ngữ pháp, Tiến độ), phiên bản này bổ sung thêm khả năng **Ôn tập chủ động (Active Recall)** và **Luyện nghe**, giải quyết trọn vẹn vòng lặp: Học -> Thực hành -> Ôn tập -> Kiểm tra.
+
+## 2. YÊU CẦU CHỨC NĂNG (FUNCTIONAL REQUIREMENTS - FR)
+
+### 2.1 MODULE "MAGIC VOCAB" (QUẢN LÝ TỪ VỰNG THÔNG MINH)
+*Core Feature: Tự động hóa việc xây dựng vốn từ.*
+
+*   **FR1.1: Nhập Từ mới Nhanh**
+    *   Người dùng nhập từ khóa tiếng Anh. Hỗ trợ nhập bằng giọng nói (Voice Input) để tiện lợi hơn (Mở rộng).
+*   **FR1.2: Tự động Làm giàu Dữ liệu (AI Enrichment)**
+    *   Hệ thống gọi AI API (Ollama) để tự động điền:
+        *   Phiên âm (IPA).
+        *   Nghĩa tiếng Việt (ngắn gọn, sát nghĩa).
+        *   Loại từ (Noun, Verb, Adj...).
+        *   **Câu ví dụ song ngữ** (Anh - Việt) giúp hiểu ngữ cảnh.
+        *   Cấp độ CEFR (A1-C2).
+        *   *(Mới)* **Từ đồng nghĩa/trái nghĩa** để mở rộng vốn từ.
+*   **FR1.3: Phát âm Chuẩn (Audio TTS)** *(Mới)*
+    *   Tích hợp Text-to-Speech (TTS) để người dùng nghe cách phát âm chuẩn của từ và câu ví dụ ngay tại màn hình chi tiết.
+*   **FR1.4: Lưu trữ & Cá nhân hóa**
+    *   Lưu từ vựng vào CSDL cá nhân. Cho phép người dùng chỉnh sửa nội dung AI tạo ra nếu muốn ghi chú thêm.
+*   **FR1.5: Sổ tay Từ vựng (Vocabulary Notebook)**
+    *   Hiển thị danh sách từ dạng thẻ (Card) hoặc danh sách (List).
+    *   Bộ lọc nâng cao: Theo ngày thêm, theo cấp độ CEFR, theo loại từ.
+    *   Tìm kiếm tức thì (Instant Search).
+
+### 2.2 MODULE "GRAMMAR & STYLE CHECKER" (CHẤM ĐIỂM & SỬA LỖI)
+*Core Feature: Phản hồi tức thì cho kỹ năng Viết.*
+
+*   **FR2.1: Trình soạn thảo Thông minh**
+    *   Vùng nhập liệu văn bản hỗ trợ đếm từ, kiểm tra chính tả cơ bản.
+*   **FR2.2: Phân tích Chuyên sâu (AI Analysis)**
+    *   Chấm điểm bài viết trên thang 10 (tương tự IELTS/TOEFL).
+    *   Phát hiện lỗi ngữ pháp, chính tả, dùng từ sai ngữ cảnh.
+*   **FR2.3: Gợi ý Nâng cao (Style Suggestions)**
+    *   Đề xuất viết lại câu (Paraphrase) để văn phong tự nhiên hơn (Naturalness).
+    *   Gợi ý từ vựng cao cấp hơn (Academic Vocabulary) thay thế cho từ đơn giản.
+*   **FR2.4: Lịch sử Chấm bài** *(Mới)*
+    *   Lưu lại các bài viết đã chấm kèm nhận xét để người dùng theo dõi sự tiến bộ qua thời gian.
+
+### 2.3 MODULE "STATS & STREAKS" (THEO DÕI TIẾN ĐỘ)
+*Core Feature: Gamification để duy trì động lực.*
+
+*   **FR3.1: Hệ thống Streak (Chuỗi ngày học)**
+    *   Tự động tính chuỗi ngày liên tục khi người dùng có hoạt động (Thêm từ hoặc Chấm bài).
+    *   Cơ chế "Đóng băng Streak" (Streak Freeze): Cho phép bỏ lỡ 1 ngày mà không mất chuỗi (có thể mua bằng điểm tích lũy - Mở rộng).
+*   **FR3.2: Thống kê Từ vựng**
+    *   Biểu đồ tròn: Phân bổ loại từ (Danh/Động/Tính).
+    *   Biểu đồ cột: Phân bổ trình độ (A1-C2). Giúp người học biết mình đang ở đâu.
+*   **FR3.3: Huy hiệu Thành tích (Badges)**
+    *   Tự động mở khóa huy hiệu: "Ong chăm chỉ" (7 ngày streak), "Học giả" (100 từ vựng), "Nhà văn" (10 bài viết).
+
+### 2.4 MODULE "SMART REVIEW" (ÔN TẬP THÔNG MINH) *(MỚI - QUAN TRỌNG)*
+*Bổ sung tính năng để giải quyết vấn đề "Học trước quên sau".*
+
+*   **FR4.1: Flashcards (Thẻ học từ)**
+    *   Tự động tạo Flashcard từ dữ liệu Magic Vocab.
+    *   Mặt trước: Từ vựng. Mặt sau: Nghĩa, IPA, Ví dụ, Audio.
+*   **FR4.2: Chế độ Luyện tập**
+    *   Quiz trắc nghiệm: Chọn nghĩa đúng.
+    *   Điền từ còn thiếu vào câu ví dụ.
+*   **FR4.3: Lặp lại ngắt quãng (Spaced Repetition - Lite)**
+    *   Hệ thống nhắc nhở ôn tập các từ cũ sau 1 ngày, 3 ngày, 7 ngày để chuyển chúng vào trí nhớ dài hạn.
+
+### 2.5 MODULE HỆ THỐNG & CẤU HÌNH
+*   **FR5.1: Cấu hình AI Model**: Người dùng chọn Model (Llama 3, Mistral...) và Endpoint (Local/Cloud).
+*   **FR5.2: Xuất/Nhập Dữ liệu (Backup)**: Cho phép xuất dữ liệu từ vựng ra file JSON/Excel để sao lưu hoặc in ấn.
+*   **FR5.3: Dark Mode**: Giao diện tối giúp học buổi đêm không mỏi mắt.
+
+---
+
+## 3. YÊU CẦU PHI CHỨC NĂNG (NFR)
+
+*   **NFR1 - Hiệu năng**: Phản hồi AI dưới 5s cho tác vụ đơn giản. Giao diện mượt mà (60fps).
+*   **NFR2 - Trải nghiệm (UX)**: "Zero-friction" (Không ma sát). Từ lúc mở app đến lúc nhập từ < 3s.
+*   **NFR3 - Độ tin cậy**: Dữ liệu Streak phải chính xác tuyệt đối. Dữ liệu từ vựng được lưu persistent (Local Storage / IndexedDB).
+*   **NFR4 - Khả năng mở rộng**: Mã nguồn thiết kế theo Clean Architecture để dễ dàng thêm Backend sau này.
+
+---
+
+## 4. RÀNG BUỘC & GIẢ ĐỊNH
+*   **Ràng buộc**: Phụ thuộc vào kết nối Internet để gọi AI Cloud (trừ khi chạy Local Ollama).
+*   **Giả định**: Người dùng có kiến thức cơ bản về API Key nếu sử dụng dịch vụ trả phí, hoặc cài đặt sẵn Ollama nếu dùng miễn phí cục bộ.

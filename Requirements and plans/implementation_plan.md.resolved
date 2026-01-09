@@ -1,0 +1,43 @@
+# Implementation Plan - Magic English 2.0
+
+We are upgrading Magic English to Version 2.0 based on the updated SRS. This plan focuses on adding high-value learning tools: Audio Pronunciation, Smart Review (Flashcards), and Data Management.
+
+## User Review Required
+> [!IMPORTANT]
+> **Audio TTS**: We will use the browser's built-in `window.speechSynthesis` API for offline, free text-to-speech. This does not require an external API key.
+> **Flashcards**: A new "Smart Review" tab will be added to the Navigation.
+
+## Proposed Changes
+
+### 1. Magic Vocab Enhancements (Audio & Export)
+#### [MODIFY] [MagicVocab.vue](file:///c:/Coding/FullStack/BTL/Magicenglishapp/src/app/components/MagicVocab.vue)
+- Add **Text-to-Speech (TTS)**: A "Speaker" icon on each vocabulary card to read the word and example sentence.
+- Add **Export Button**: A button in the header to download the vocabulary list as a JSON file (Backup).
+
+### 2. Smart Review Module (Flashcards)
+#### [NEW] [SmartReview.vue](file:///c:/Coding/FullStack/BTL/Magicenglishapp/src/app/components/SmartReview.vue)
+- Create a new component for Flashcards.
+- Logic: Fetch words from `localStorage`, shuffle, and display in a "Question/Answer" flip card format.
+- UI: "Front" shows the word. "Back" shows meaning, IPA, and example.
+- Controls: "Easy", "Hard" buttons (mocking Spaced Repetition logic).
+
+#### [MODIFY] [Navigation.vue](file:///c:/Coding/FullStack/BTL/Magicenglishapp/src/app/components/Navigation.vue)
+- Add a new tab `Smart Review` (Icon: `Brain` or `School`).
+
+#### [MODIFY] [App.vue](file:///c:/Coding/FullStack/BTL/Magicenglishapp/src/app/App.vue)
+- Register the new `SmartReview` component and handle tab switching.
+
+### 3. Grammar Checker Enhancements
+#### [MODIFY] [GrammarChecker.vue](file:///c:/Coding/FullStack/BTL/Magicenglishapp/src/app/components/GrammarChecker.vue)
+- Implement `History` feature: Save checked text and results to `localStorage`.
+- Display a "Previous Checks" list for review.
+
+## Verification Plan
+
+### Automated Tests
+- Browser test to click the "Speaker" icon and verify no errors (sound verification is manual).
+- Browser test to navigate to "Smart Review", flip a card, and verify content.
+- Browser test to "Export" and see file download.
+
+### Manual Verification
+- User to verify Audio plays correctly on their device.
